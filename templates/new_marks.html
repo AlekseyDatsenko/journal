@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Новые оценки{% endblock %}
+
+{% block content %}
+    <h1>Оценки</h1>
+    {% if user.is_staff %}
+    <form method="POST" class="post-form">
+        {% for u in users %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% endfor %}
+        <button type="submit" class="save btn btn-default">Сохранить</button>
+    </form>
+    {% endif %}
+{% endblock %}

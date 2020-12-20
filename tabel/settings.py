@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'users',
     'pages',
+    'grades',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '###'
-EMAIL_HOST_PASSWORD = '###'
+EMAIL_HOST_USER = 'new.school.journal@gmail.com'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

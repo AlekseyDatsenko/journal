@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Оценки{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Месяц</th>
+                <th scope="col">Предмет</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+                <th scope="col">#</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for obj in object_list %}
+                <tr>
+                    <th scope="row">{{ obj.month_name }}</th>
+                    <td>{{ obj.lesson }}</td>
+                    <td>{{ obj.mark_1 }}</td>
+                    <td>{{ obj.mark_2 }}</td>
+                    <td>{{ obj.mark_3 }}</td>
+                    <td>{{ obj.mark_4 }}</td>
+                    <td>{{ obj.mark_5 }}</td>
+                    <td>{{ obj.mark_6 }}</td>
+                    <td>{{ obj.mark_7 }}</td>
+                    <td>{{ obj.mark_8 }}</td>
+                    <td>{{ obj.mark_9 }}</td>
+                    <td>{{ obj.mark_10 }}</td>
+                    <td>{{ obj.mark_11 }}</td>
+                    <td>{{ obj.mark_12 }}</td>
+                    <td>{{ obj.mark_13 }}</td>
+                    <td>{{ obj.mark_14 }}</td>
+                    <td>{{ obj.mark_15 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+{% endblock %}
